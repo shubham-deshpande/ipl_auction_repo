@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/ipl_auction_repo/static/css/main.1a5aff37.css",
+    "main.js": "/ipl_auction_repo/static/js/main.cba25da9.js",
+    "static/js/453.f26bbc64.chunk.js": "/ipl_auction_repo/static/js/453.f26bbc64.chunk.js",
+    "static/media/SRHoutline.png": "/ipl_auction_repo/static/media/SRHoutline.30fb7a6439147c92f8e8.png",
+    "static/media/RCBoutline.png": "/ipl_auction_repo/static/media/RCBoutline.2d0700964a0065c2899b.png",
+    "static/media/MIoutline.png": "/ipl_auction_repo/static/media/MIoutline.9ff7908990ce02e9c42f.png",
+    "static/media/KKRoutline.png": "/ipl_auction_repo/static/media/KKRoutline.528b943ec69f36d76a5a.png",
+    "static/media/LSGoutline.png": "/ipl_auction_repo/static/media/LSGoutline.517d7909d56d3125d4f9.png",
+    "static/media/DCoutline.png": "/ipl_auction_repo/static/media/DCoutline.336a50a9b93aab9aa0ae.png",
+    "static/media/RRoutline.png": "/ipl_auction_repo/static/media/RRoutline.e1f2d2fca88104d1eef5.png",
+    "static/media/PBKSoutline.png": "/ipl_auction_repo/static/media/PBKSoutline.de0c3e08c632f19956ac.png",
+    "static/media/ipl-logo.jpg": "/ipl_auction_repo/static/media/ipl-logo.d1e737944dfe0e0a07f3.jpg",
+    "static/media/GToutline.png": "/ipl_auction_repo/static/media/GToutline.30b7d8980cb7193ab5fc.png",
+    "static/media/CSKoutline.png": "/ipl_auction_repo/static/media/CSKoutline.ac423bd1b03468f84908.png",
+    "index.html": "/ipl_auction_repo/index.html",
+    "main.1a5aff37.css.map": "/ipl_auction_repo/static/css/main.1a5aff37.css.map",
+    "main.cba25da9.js.map": "/ipl_auction_repo/static/js/main.cba25da9.js.map",
+    "453.f26bbc64.chunk.js.map": "/ipl_auction_repo/static/js/453.f26bbc64.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1a5aff37.css",
+    "static/js/main.cba25da9.js"
+  ]
+}

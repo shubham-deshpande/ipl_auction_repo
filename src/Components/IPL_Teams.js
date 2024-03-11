@@ -1,5 +1,5 @@
-import React from 'react'
-import './IPL_Teams.css'
+import React, { useEffect, useState } from 'react';
+import './IPL_Teams.css';
 import DC from './DCoutline.png';
 import LSG from './LSGoutline.png';
 import MI from './MIoutline.png';
@@ -11,58 +11,127 @@ import RR from './RRoutline.png';
 import SRH from './SRHoutline.png';
 import KKR from './KKRoutline.png';
 
-export default function 
-() {
-  return (
-    <>
-        <div className="outer">
-          <div className='inner'>
-            <div className='brk'>
-              <div className='txt'>
-                <img src={MI} className='img'></img>
-                <input type='text' className='inp'></input>
-              </div>
-              <div className='txt'>
-              <img src={CSK} className='img'></img>
-                <input type='text' className='inp'></input>
-              </div>
-              <div className='txt'>
-              <img src={RCB} className='img'></img>
-                <input type='text' className='inp'></input>
-              </div>
-              <div className='txt'>
-              <img src={LSG} className='img'></img>
-                <input type='text' className='inp'></input>
-              </div>
-              <div className='txt'>
-              <img src={GT} className='img'></img>
-                <input type='text' className='inp'></input>
-              </div>
+export default function IPLTeams() {
+    // Initialize state to hold input values for each team
+    const [teamInputs, setTeamInputs] = useState({
+        MI: '', CSK: '', RCB: '', LSG: '', GT: '', DC: '', KKR: '', RR: '', PBKS: '', SRH: ''
+    });
+
+    // Load saved input values from localStorage on component mount
+    useEffect(() => {
+        const savedInputs = JSON.parse(localStorage.getItem('teamInputs'));
+        if (savedInputs) {
+            setTeamInputs(savedInputs);
+        }
+    }, []);
+
+    // Update input value for a specific team and save to localStorage
+    const handleInputChange = (team, value) => {
+        const updatedInputs = { ...teamInputs, [team]: value };
+        setTeamInputs(updatedInputs);
+        localStorage.setItem('teamInputs', JSON.stringify(updatedInputs));
+    };
+
+    return (
+        <>
+            <div className="outer">
+                <div className='inner'>
+                    <div className='brk'>
+                        <div className='txt'>
+                            <img src={MI} className='img' alt='MI'></img>
+                            <input
+                                type='text'
+                                className='inp'
+                                value={teamInputs['MI']}
+                                onChange={(e) => handleInputChange('MI', e.target.value)}
+                            ></input>
+                        </div>
+                        <div className='txt'>
+                            <img src={CSK} className='img' alt='CSK'></img>
+                            <input
+                                type='text'
+                                className='inp'
+                                value={teamInputs['CSK']}
+                                onChange={(e) => handleInputChange('CSK', e.target.value)}
+                            ></input>
+                        </div>
+                        <div className='txt'>
+                            <img src={RCB} className='img' alt='RCB'></img>
+                            <input
+                                type='text'
+                                className='inp'
+                                value={teamInputs['RCB']}
+                                onChange={(e) => handleInputChange('RCB', e.target.value)}
+                            ></input>
+                        </div>
+                        <div className='txt'>
+                            <img src={LSG} className='img' alt='LSG'></img>
+                            <input
+                                type='text'
+                                className='inp'
+                                value={teamInputs['LSG']}
+                                onChange={(e) => handleInputChange('LSG', e.target.value)}
+                            ></input>
+                        </div>
+                        <div className='txt'>
+                            <img src={GT} className='img' alt='GT'></img>
+                            <input
+                                type='text'
+                                className='inp'
+                                value={teamInputs['GT']}
+                                onChange={(e) => handleInputChange('GT', e.target.value)}
+                            ></input>
+                        </div>
+                    </div>
+                    <div className='brk'>
+                        <div className='txt'>
+                            <img src={DC} className='img' alt='DC'></img>
+                            <input
+                                type='text'
+                                className='inp'
+                                value={teamInputs['DC']}
+                                onChange={(e) => handleInputChange('DC', e.target.value)}
+                            ></input>
+                        </div>
+                        <div className='txt'>
+                            <img src={KKR} className='img' alt='KKR'></img>
+                            <input
+                                type='text'
+                                className='inp'
+                                value={teamInputs['KKR']}
+                                onChange={(e) => handleInputChange('KKR', e.target.value)}
+                            ></input>
+                        </div>
+                        <div className='txt'>
+                            <img src={RR} className='img' alt='RR'></img>
+                            <input
+                                type='text'
+                                className='inp'
+                                value={teamInputs['RR']}
+                                onChange={(e) => handleInputChange('RR', e.target.value)}
+                            ></input>
+                        </div>
+                        <div className='txt'>
+                            <img src={PBKS} className='img' alt='PBKS'></img>
+                            <input
+                                type='text'
+                                className='inp'
+                                value={teamInputs['PBKS']}
+                                onChange={(e) => handleInputChange('PBKS', e.target.value)}
+                            ></input>
+                        </div>
+                        <div className='txt'>
+                            <img src={SRH} className='img' alt='SRH'></img>
+                            <input
+                                type='text'
+                                className='inp'
+                                value={teamInputs['SRH']}
+                                onChange={(e) => handleInputChange('SRH', e.target.value)}
+                            ></input>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div className='brk'>
-              <div className='txt'>
-                <img src={DC} className='img'></img>
-                <input type='text' className='inp'></input>
-              </div>
-              <div className='txt'>
-              <img src={KKR} className='img'></img>
-                <input type='text' className='inp'></input>
-              </div>
-              <div className='txt'>
-              <img src={RR} className='img'></img>
-                <input type='text' className='inp'></input>
-              </div>
-              <div className='txt'>
-              <img src={PBKS} className='img'></img>
-                <input type='text' className='inp'></input>
-              </div>
-              <div className='txt'>
-              <img src={SRH} className='img'></img>
-                <input type='text' className='inp'></input>
-              </div>
-            </div>
-          </div>
-        </div>
-    </>
-  );
+        </>
+    );
 }

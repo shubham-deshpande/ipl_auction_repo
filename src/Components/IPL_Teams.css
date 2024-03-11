@@ -17,6 +17,7 @@
   }
   .inp{
     font-weight: 700;
+    font-size: 30px;
     width: 250px;
     height: 50px;
     margin-top: 35px;
@@ -24,7 +25,6 @@
     border-radius: 20px;
     box-sizing: content-box;
     text-align: center;
-    font-size: larger;
     background-color: rgb(255, 255, 255);
   }
   .img{

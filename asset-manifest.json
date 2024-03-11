@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/ipl_auction_repo/static/css/main.1a5aff37.css",
-    "main.js": "/ipl_auction_repo/static/js/main.ea115a96.js",
+    "main.css": "/ipl_auction_repo/static/css/main.1d1eef3b.css",
+    "main.js": "/ipl_auction_repo/static/js/main.925db87e.js",
     "static/js/453.f26bbc64.chunk.js": "/ipl_auction_repo/static/js/453.f26bbc64.chunk.js",
     "static/media/SRHoutline.png": "/ipl_auction_repo/static/media/SRHoutline.30fb7a6439147c92f8e8.png",
     "static/media/RCBoutline.png": "/ipl_auction_repo/static/media/RCBoutline.2d0700964a0065c2899b.png",
@@ -15,12 +15,12 @@
     "static/media/GToutline.png": "/ipl_auction_repo/static/media/GToutline.30b7d8980cb7193ab5fc.png",
     "static/media/CSKoutline.png": "/ipl_auction_repo/static/media/CSKoutline.ac423bd1b03468f84908.png",
     "index.html": "/ipl_auction_repo/index.html",
-    "main.1a5aff37.css.map": "/ipl_auction_repo/static/css/main.1a5aff37.css.map",
-    "main.ea115a96.js.map": "/ipl_auction_repo/static/js/main.ea115a96.js.map",
+    "main.1d1eef3b.css.map": "/ipl_auction_repo/static/css/main.1d1eef3b.css.map",
+    "main.925db87e.js.map": "/ipl_auction_repo/static/js/main.925db87e.js.map",
     "453.f26bbc64.chunk.js.map": "/ipl_auction_repo/static/js/453.f26bbc64.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.1a5aff37.css",
-    "static/js/main.ea115a96.js"
+    "static/css/main.1d1eef3b.css",
+    "static/js/main.925db87e.js"
   ]
 }

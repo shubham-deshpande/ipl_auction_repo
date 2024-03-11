@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/ipl_auction_repo/static/css/main.36acf036.css",
-    "main.js": "/ipl_auction_repo/static/js/main.58c7e55d.js",
+    "main.js": "/ipl_auction_repo/static/js/main.fa4cff9c.js",
     "static/js/453.f26bbc64.chunk.js": "/ipl_auction_repo/static/js/453.f26bbc64.chunk.js",
     "static/media/SRHoutline.png": "/ipl_auction_repo/static/media/SRHoutline.30fb7a6439147c92f8e8.png",
     "static/media/RCBoutline.png": "/ipl_auction_repo/static/media/RCBoutline.2d0700964a0065c2899b.png",
@@ -16,11 +16,11 @@
     "static/media/CSKoutline.png": "/ipl_auction_repo/static/media/CSKoutline.ac423bd1b03468f84908.png",
     "index.html": "/ipl_auction_repo/index.html",
     "main.36acf036.css.map": "/ipl_auction_repo/static/css/main.36acf036.css.map",
-    "main.58c7e55d.js.map": "/ipl_auction_repo/static/js/main.58c7e55d.js.map",
+    "main.fa4cff9c.js.map": "/ipl_auction_repo/static/js/main.fa4cff9c.js.map",
     "453.f26bbc64.chunk.js.map": "/ipl_auction_repo/static/js/453.f26bbc64.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.36acf036.css",
-    "static/js/main.58c7e55d.js"
+    "static/js/main.fa4cff9c.js"
   ]
 }

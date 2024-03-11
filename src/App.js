@@ -18,9 +18,9 @@ function App() {
     <div className="App">
       <Navbar name="IPL" t="Teams" p="Players"/>
       <Routes>
-          <Route path="/Join" element={<Join/>} />
-          <Route path="/Teams" element={<Teams/>} />
-          <Route path="/Players" element={<Players/>}/>
+          <Route path="/ipl_auction_repo/" element={<Join/>} />
+          <Route path="/ipl_auction_repo/Teams" element={<Teams/>} />
+          <Route path="/ipl_auction_repo/Players" element={<Players/>}/>
       </Routes>
     </div>
     </Router>

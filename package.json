@@ -1,7 +1,7 @@
 {
   "name": "ipl-auction",
   "version": "0.1.0",
-  "homepage": "https://shubham_deshpande.github.io/react-gh-pages",
+  "homepage": "https://shubham_deshpande.github.io/ipl_auction_repo",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",

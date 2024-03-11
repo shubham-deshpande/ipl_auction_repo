@@ -12,12 +12,13 @@ import SRH from './SRHoutline.png';
 import KKR from './KKRoutline.png';
 
 export default function IPLTeams() {
-    // Initialize state to hold input values for each team
-    const [teamInputs, setTeamInputs] = useState({
+    const initialTeamInputs = {
         MI: '', CSK: '', RCB: '', LSG: '', GT: '', DC: '', KKR: '', RR: '', PBKS: '', SRH: ''
-    });
+    };
 
-    // Load saved input values from localStorage on component mount
+    const [teamInputs, setTeamInputs] = useState(initialTeamInputs);
+    const [previousState, setPreviousState] = useState(null);
+
     useEffect(() => {
         const savedInputs = JSON.parse(localStorage.getItem('teamInputs'));
         if (savedInputs) {
@@ -25,11 +26,24 @@ export default function IPLTeams() {
         }
     }, []);
 
-    // Update input value for a specific team and save to localStorage
     const handleInputChange = (team, value) => {
         const updatedInputs = { ...teamInputs, [team]: value };
         setTeamInputs(updatedInputs);
         localStorage.setItem('teamInputs', JSON.stringify(updatedInputs));
+    };
+
+    const handleReset = () => {
+        setPreviousState(teamInputs);
+        setTeamInputs(initialTeamInputs);
+        localStorage.removeItem('teamInputs');
+    };
+
+    const handleRollback = () => {
+        if (previousState) {
+            setTeamInputs(previousState);
+            localStorage.setItem('teamInputs', JSON.stringify(previousState));
+            setPreviousState(null);
+        }
     };
 
     return (
@@ -131,6 +145,8 @@ export default function IPLTeams() {
                         </div>
                     </div>
                 </div>
+                <button className = 'button' onClick={handleReset}>Reset Values</button>
+            <button className = 'button' onClick={handleRollback}>Rollback</button>
             </div>
         </>
     );

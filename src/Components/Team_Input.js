@@ -11,6 +11,7 @@ export default function TeamInput({ teamName }) {
 
     const [user, setUser] = useState(initialUserState);
     const [cost, setCost] = useState(initialCostState);
+    const [previousState, setPreviousState] = useState(null);
 
     useEffect(() => {
         const savedUser = JSON.parse(localStorage.getItem(`user_${teamName}`));
@@ -26,13 +27,31 @@ export default function TeamInput({ teamName }) {
     const handleInputs = (e) => {
         const { name, value } = e.target;
         setUser(prevState => {
-            const updatedUser = {...prevState, [name]: parseFloat(value)};
+            const updatedUser = { ...prevState, [name]: parseFloat(value) };
             const remainingCost = 20.0 - (updatedUser.cost1 + updatedUser.cost2 + updatedUser.cost3 + updatedUser.cost4 + updatedUser.cost5 + updatedUser.cost6);
-            setCost({...cost, cost7: remainingCost});
+            setCost({ ...cost, cost7: remainingCost });
             localStorage.setItem(`user_${teamName}`, JSON.stringify(updatedUser));
-            localStorage.setItem(`cost_${teamName}`, JSON.stringify({...cost, cost7: remainingCost}));
+            localStorage.setItem(`cost_${teamName}`, JSON.stringify({ ...cost, cost7: remainingCost }));
             return updatedUser;
         });
+    };
+
+    const handleReset = () => {
+        setPreviousState({ user, cost });
+        setUser(initialUserState);
+        setCost(initialCostState);
+        localStorage.removeItem(`user_${teamName}`);
+        localStorage.removeItem(`cost_${teamName}`);
+    };
+
+    const handleRollback = () => {
+        if (previousState) {
+            setUser(previousState.user);
+            setCost(previousState.cost);
+            localStorage.setItem(`user_${teamName}`, JSON.stringify(previousState.user));
+            localStorage.setItem(`cost_${teamName}`, JSON.stringify(previousState.cost));
+            setPreviousState(null);
+        }
     };
 
     return (
@@ -65,6 +84,8 @@ export default function TeamInput({ teamName }) {
                 <p className='purse_text'>Remaining Purse : </p>
                 <input type='number' className='input' placeholder='Cost' name='cost7' value={cost.cost7} readOnly />
             </div>
+            <button className = 'button' onClick={handleReset}>Reset Values</button>
+            <button className = 'button' onClick={handleRollback}>Rollback</button>
         </>
     );
 }

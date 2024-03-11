@@ -13,7 +13,7 @@
     margin: 10px;
     margin-bottom: 20px;
     width: 304px;
-    height: 324px;
+    height: 354px;
   }
   .textbox{
     background-color: rgb(0, 166, 255);
@@ -86,4 +86,10 @@
     margin-top: 10px;
     font-weight: 700;
     font-size: 20px;
+  }
+  .button{
+    width: 147px;
+    display: inline-flex;
+    justify-content: center;
+    font-weight: 700;
   }

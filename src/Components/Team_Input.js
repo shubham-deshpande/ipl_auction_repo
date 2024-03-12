@@ -2,7 +2,8 @@ import React, { useState, useEffect } from 'react';
 
 export default function TeamInput({ teamName }) {
     const initialUserState = {
-        cost1: 0.0, cost2: 0.0, cost3: 0.0, cost4: 0.0, cost5: 0.0, cost6: 0.0
+        cost1: 0.0, cost2: 0.0, cost3: 0.0, cost4: 0.0, cost5: 0.0, cost6: 0.0,
+        name1: "", name2: "", name3: "", name4: "", name5: "", name6: ""
     };
 
     const initialCostState = {
@@ -24,7 +25,7 @@ export default function TeamInput({ teamName }) {
         }
     }, [teamName]);
 
-    const handleInputs = (e) => {
+    const handleCostInputs = (e) => {
         const { name, value } = e.target;
         setUser(prevState => {
             const updatedUser = { ...prevState, [name]: parseFloat(value) };
@@ -35,6 +36,16 @@ export default function TeamInput({ teamName }) {
             return updatedUser;
         });
     };
+
+    const handleNameInputs = (e) => {
+        const { name, value } = e.target;
+        setUser(prevState => ({
+            ...prevState,
+            [name]: value
+        }));
+        localStorage.setItem(`user_${teamName}`, JSON.stringify({ ...user, [name]: value }));
+    };
+    
 
     const handleReset = () => {
         setPreviousState({ user, cost });
@@ -57,35 +68,35 @@ export default function TeamInput({ teamName }) {
     return (
         <>
             <div className='textbox'>
-                <input type='text' className='name_input' placeholder='Purchased By' />
-                <input type='number' className='input' name='cost6' placeholder='Cost' value={user.cost6} onChange={handleInputs} />
+                <input type='text' className='name_input' name='name1' placeholder='Purchased By' value={user.name1} onChange={handleNameInputs} />
+                <input type='number' className='input' name='cost6' placeholder='Cost' value={user.cost6} onChange={handleCostInputs} />
             </div>
             <div className='textbox'>
-                <input type='text' className='name_input' placeholder='Player Name' />
-                <input type='number' className='input' name='cost1' placeholder='Cost' value={user.cost1} onChange={handleInputs} />
+                <input type='text' className='name_input' name='name2' placeholder='Player Name' value={user.name2} onChange={handleNameInputs} />
+                <input type='number' className='input' name='cost1' placeholder='Cost' value={user.cost1} onChange={handleCostInputs} />
             </div>
             <div className='textbox'>
-                <input type='text' className='name_input' placeholder='Player Name' />
-                <input type='number' className='input' name='cost2' placeholder='Cost' value={user.cost2} onChange={handleInputs} />
+                <input type='text' className='name_input' name='name3' placeholder='Player Name' value={user.name3} onChange={handleNameInputs} />
+                <input type='number' className='input' name='cost2' placeholder='Cost' value={user.cost2} onChange={handleCostInputs} />
             </div>
             <div className='textbox'>
-                <input type='text' className='name_input' placeholder='Player Name' />
-                <input type='number' className='input' name='cost3' placeholder='Cost' value={user.cost3} onChange={handleInputs} />
+                <input type='text' className='name_input' name='name4' placeholder='Player Name' value={user.name4} onChange={handleNameInputs} />
+                <input type='number' className='input' name='cost3' placeholder='Cost' value={user.cost3} onChange={handleCostInputs} />
             </div>
             <div className='textbox'>
-                <input type='text' className='name_input' placeholder='Player Name' />
-                <input type='number' className='input' name='cost4' placeholder='Cost' value={user.cost4} onChange={handleInputs} />
+                <input type='text' className='name_input' name='name5' placeholder='Player Name' value={user.name5} onChange={handleNameInputs} />
+                <input type='number' className='input' name='cost4' placeholder='Cost' value={user.cost4} onChange={handleCostInputs} />
             </div>
             <div className='textbox'>
-                <input type='text' className='name_input' placeholder='Player Name' />
-                <input type='number' className='input' name='cost5' placeholder='Cost' value={user.cost5} onChange={handleInputs} />
+                <input type='text' className='name_input' name='name6' placeholder='Player Name' value={user.name6} onChange={handleNameInputs} />
+                <input type='number' className='input' name='cost5' placeholder='Cost' value={user.cost5} onChange={handleCostInputs} />
             </div>
             <div className='textbox'>
                 <p className='purse_text'>Remaining Purse : </p>
                 <input type='number' className='input' placeholder='Cost' name='cost7' value={cost.cost7} readOnly />
             </div>
-            <button className = 'button' onClick={handleReset}>Reset Values</button>
-            <button className = 'button' onClick={handleRollback}>Rollback</button>
+            <button className='button' onClick={handleReset}>Reset Values</button>
+            <button className='button' onClick={handleRollback}>Rollback</button>
         </>
     );
 }

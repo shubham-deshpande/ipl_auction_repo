@@ -20,7 +20,7 @@ export default function Navbar(props) {
         </button>
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                 <li className="nav-item">
-                <Link id='navb' to="/ipl_auction_repo/Teams">{props.t}</Link>
+                <Link id='navb' to="/ipl_auction_repo/PPT">{props.t}</Link>
                 </li>
                 <li className="nav-item">
                 <Link id='navb' to="/ipl_auction_repo/Players">{props.p}</Link>

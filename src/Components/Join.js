@@ -1,12 +1,12 @@
 import React from 'react'
-import Teams from './IPL_Teams';
+import PPT from './Power_Point.js';
 import Players from './IPL_Players';
 
 export default function 
 () {
   return (
     <>
-    <Teams/>
+    <PPT/>
     <Players/>
     </>
   );

@@ -7,16 +7,16 @@
     flex-wrap: wrap;
     justify-content: center;
     padding: 100px;
+    color: black;
   }
   .break{
     border: 5px solid #0d6efd;
     margin: 10px;
     margin-bottom: 20px;
     width: 304px;
-    height: 354px;
+    height: 424px;
   }
   .textbox{
-    background-color: rgb(0, 166, 255);
     display: inline-flex;
   }
   .input{
@@ -49,22 +49,16 @@
     height: 30px;
     margin: 2px;
   }
-  .head{
-    text-align: center;
-    font-weight: 700;
-    background-color: aqua;
-    height: 25px;
-    width: 295px;
-  }
   .purse_text{
     font-weight: 700;
-    width: 186px;
+    width: 184px;
     height: 28px;
     box-sizing: content-box;
     text-align: center;
     font-size: larger;
     background-color: rgb(255, 255, 255);
-    margin: 3px;
+    margin: 3px 3px 3px 3px;
+    border: 2px solid #000000
   }
   .img-logo{
     width: 60px;
@@ -73,23 +67,239 @@
     background-color: rgb(255, 255, 255);
     margin: 5px;
   }
-  .head{
-    height: 70px;
-    display: inline-flex;
-  }
-  .team_name{
+  .team_name_mi {
     margin-top: 20px;
     font-weight: 700;
     font-size: 20px;
-  }
-  .team_name_RCB{
-    margin-top: 10px;
+    color: #FFD141; /* Mumbai Indians */
+}
+
+.team_name_csk {
+    margin-top: 20px;
     font-weight: 700;
     font-size: 20px;
-  }
+    color: #2B5DA8; /* Chennai Super Kings */
+}
+
+.team_name_rcb {
+    margin-top: 5px;
+    font-weight: 700;
+    font-size: 20px;
+    color: #E5B582; /* Royal Challengers Bangalore */
+}
+
+.team_name_lsg {
+    margin-top: 20px;
+    font-weight: 700;
+    font-size: 20px;
+    color: #F28B00; /* Lucknow Super Giants */
+}
+
+.team_name_gt {
+    margin-top: 20px;
+    font-weight: 700;
+    font-size: 20px;
+    color: #DBBE6E; /* Gujarat Titans */
+}
+
+.team_name_dc {
+    margin-top: 20px;
+    font-weight: 700;
+    font-size: 20px;
+    color: #FFFFFF; /* Delhi Capitals */
+}
+
+.team_name_kkr {
+    margin-top: 20px;
+    font-weight: 700;
+    font-size: 20px;
+    color: #F7D54E; /* Kolkata Knight Riders */
+}
+
+.team_name_rr {
+    margin-top: 20px;
+    font-weight: 700;
+    font-size: 20px;
+    color: #C3A11F; /* Rajasthan Royals */
+}
+
+.team_name_pbks {
+    margin-top: 20px;
+    font-weight: 700;
+    font-size: 20px;
+    color: #DD1F2D; /* Punjab Kings */
+}
+
+.team_name_srh {
+    margin-top: 20px;
+    font-weight: 700;
+    font-size: 20px;
+    color: #FCCB11; /* Sunrisers Hyderabad */
+}
+
   .button{
     width: 147px;
     display: inline-flex;
     justify-content: center;
     font-weight: 700;
   }
+  .head-mi{
+    text-align: center;
+    font-weight: 700;
+    background-color: #004BA0;
+    width: 295px;
+    height: 70px;
+    display: inline-flex;
+  }  .head-csk{
+    text-align: center;
+    font-weight: 700;
+    background-color: #FFFF3C;
+    width: 295px;
+    height: 70px;
+    display: inline-flex;
+  }  .head-dc{
+    text-align: center;
+    font-weight: 700;
+    background-color: #00008B;
+    width: 295px;
+    height: 70px;
+    display: inline-flex;
+  }  .head-pbks{
+    text-align: center;
+    font-weight: 700;
+    background-color: #DCDDDF;
+    width: 295px;
+    height: 70px;
+    display: inline-flex;
+  }  .head-kkr{
+    text-align: center;
+    font-weight: 700;
+    background-color: #2E0854;
+    width: 295px;
+    height: 70px;
+    display: inline-flex;
+  }  .head-rr{
+    text-align: center;
+    font-weight: 700;
+    background-color: #254AA5;
+    width: 295px;
+    height: 70px;
+    display: inline-flex;
+  }  .head-rcb{
+    text-align: center;
+    font-weight: 700;
+    background-color: #EC1C24;
+    width: 295px;
+    height: 70px;
+    display: inline-flex;
+  }  .head-srh{
+    text-align: center;
+    font-weight: 700;
+    background-color: #FF822A;
+    width: 295px;
+    height: 70px;
+    display: inline-flex;
+  }  .head-gt{
+    text-align: center;
+    font-weight: 700;
+    background-color: #1B2133;
+    width: 295px;
+    height: 70px;
+    display: inline-flex;
+  }  .head-lsg{
+    text-align: center;
+    font-weight: 700;
+    background-color: #0057E2;
+    width: 295px;
+    height: 70px;
+    display: inline-flex;
+  }
+  .break-mi {
+    border: 5px solid #004BA0;
+    margin: 10px;
+    margin-bottom: 20px;
+    width: 304px;
+    height: 428px;
+    background-color: #004BA0;
+}
+
+.break-csk {
+    border: 5px solid #FFFF3C;
+    margin: 10px;
+    margin-bottom: 20px;
+    width: 304px;
+    height: 428px;
+    background-color: #FFFF3C;
+}
+
+.break-rcb {
+    border: 5px solid #EC1C24;
+    margin: 10px;
+    margin-bottom: 20px;
+    width: 304px;
+    height: 428px;
+    background-color: #EC1C24;
+}
+
+.break-lsg {
+    border: 5px solid #0057E2;
+    margin: 10px;
+    margin-bottom: 20px;
+    width: 304px;
+    height: 428px;
+    background-color: #0057E2;
+}
+
+.break-gt {
+    border: 5px solid #1B2133;
+    margin: 10px;
+    margin-bottom: 20px;
+    width: 304px;
+    height: 428px;
+    background-color: #1B2133;
+}
+
+.break-dc {
+    border: 5px solid #00008B;
+    margin: 10px;
+    margin-bottom: 20px;
+    width: 304px;
+    height: 428px;
+    background-color: #00008B;
+}
+
+.break-kkr {
+    border: 5px solid #2E0854;
+    margin: 10px;
+    margin-bottom: 20px;
+    width: 304px;
+    height: 428px;
+    background-color: #2E0854;
+}
+
+.break-rr {
+    border: 5px solid #254AA5;
+    margin: 10px;
+    margin-bottom: 20px;
+    width: 304px;
+    height: 428px;
+    background-color: #254AA5;
+}
+
+.break-pbks {
+    border: 5px solid #DCDDDF;
+    margin: 10px;
+    margin-bottom: 20px;
+    width: 304px;
+    height: 428px;
+    background-color: #DCDDDF;
+}
+
+.break-srh {
+    border: 5px solid #FF822A;
+    margin: 10px;
+    margin-bottom: 20px;
+    width: 304px;
+    height: 428px;
+    background-color: #FF822A;
+}

@@ -1,5 +1,5 @@
 import React from 'react'
-import PPT from './Power_Point.js';
+import PPT from './Auction';
 import Players from './IPL_Players';
 
 export default function 

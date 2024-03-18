@@ -1,8 +1,8 @@
 import './App.css';
 import React from 'react'
 import Navbar from './Components/Navbar';
-import PPT from './Components/Power_Point.js';
 import Players from './Components/IPL_Players';
+import PPT from './Components/Auction';
 import {
   BrowserRouter as Router,
   Route,
@@ -16,7 +16,7 @@ function App() {
   return (
     <Router>
     <div className="App">
-      <Navbar name="IPL" t="PPT" p="Players"/>
+      <Navbar name="IPL" t="PPT" p="Players" s="Slide" u="Unsold"/>
       <Routes>
           <Route path="/ipl_auction_repo/" element={<Join/>} />
           <Route path="/ipl_auction_repo/PPT" element={<PPT/>} />

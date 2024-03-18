@@ -1,0 +1,27 @@
+/* Auction.css */
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Set the height to full viewport height */
+  }
+  
+  .slideDeck {
+    max-width: 800px; /* Set the maximum width of the slide deck */
+    max-height: 600px; /* Set the maximum height of the slide deck */
+    overflow: auto; /* Add scrollbars if content exceeds the max height */
+    border: 1px solid #ccc; /* Add a border for better visibility */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a shadow for depth */
+  }
+  
+  .slideDeck img {
+    max-width: 100%; /* Ensure images do not exceed the width of the slide deck */
+    height: auto; /* Maintain aspect ratio */
+  }
+
+  .slide{
+    width: 200px;
+    height: 200px;
+  }
